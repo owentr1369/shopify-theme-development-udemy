@@ -155,6 +155,23 @@
   </div>
 {% endif %}
 
+<script>
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ article.title | json }}",
+    "articleBody": "{{ article.content | strip_html | strip_newlines | json }}",
+    {% if article.excerpt != blank %}
+        "description": "{{ article.excerpt | strip_html | strip_newlines | json }}",
+    {% endif %}
+    {% if article.image  %}
+        "image": [
+            "{{ article.image | img_url: 'medium' |  prepend: 'https:' | json }}"
+        ],
+    {% endif %}
+  }
+</script>
+
 {% schema %}
 {
   "name": "Template Article",
