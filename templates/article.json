@@ -2,7 +2,30 @@
   "name": "Article",
   "sections": {
     "template": {
-      "type": "template-article"
+      "type": "template-article",
+      "blocks": {
+        "title": {
+          "type": "article_title",
+          "value": "Article Title"
+        },
+        "content": {
+          "type": "article_content",
+          "value": "Article content"
+        },
+        "author": {
+          "type": "article_author",
+          "value": "Author Name"
+        },
+        "date": {
+          "type": "article_date",
+          "value": "Date"
+        },
+        "images": {
+          "type": "article_image",
+          "value": []
+        }
+      },
+      "block_order": ["title", "images", "content", "author", "date"]
     }
   },
   "order": ["template"]
