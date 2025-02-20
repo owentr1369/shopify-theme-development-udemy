@@ -1,5 +1,5 @@
 <div class="px-4 py-8 max-w-6xl mx-auto">
-  {% paginate collection.products by 6 %}
+  {% paginate collection.products by section.settings.number_of_products_per_page %}
     <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
       {% for product in collection.products %}
         {% render 'product-card', product_product: product %}
@@ -10,3 +10,17 @@
     {% render 'pagination', pagination: paginate %}
   {% endpaginate %}
 </div>
+
+{% schema %}
+{
+  "name": "Template Collection",
+  "settings": [
+    {
+      "type": "number",
+      "id": "number_of_products_per_page",
+      "label": "Number of products per page",
+      "default": 6
+    }
+  ]
+}
+{% endschema %}
