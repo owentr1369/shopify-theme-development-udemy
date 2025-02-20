@@ -1,6 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-  "current": "Default",
+  "current": {
+    "content_for_index": [],
+    "blocks": {
+      "4377359219061587746": {
+        "type": "shopify://apps/tamtt1-test-chat-extension/blocks/customer_support/f4a1e0b6-4fbc-4c14-9da5-de60764739a2",
+        "disabled": false,
+        "settings": {
+          "class": "customer-support",
+          "padding": "10px 5px",
+          "margin": "10px 10px",
+          "button_text": "Contact Support"
+        }
+      }
+    }
+  },
   "presets": {
-    "Default": { }
+    "Default": {}
   }
 }
