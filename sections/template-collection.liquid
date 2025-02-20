@@ -1,0 +1,24 @@
+{% paginate collection.products by 6 %}
+  {% for product in collection.products %}
+    {% if product.featured_image %}
+      <div class="product-card">
+        <a href="{{ product.url | within: collection }}">
+          <img src="{{ product.featured_image.src | img_url: '300x' }}" alt="{{ product.featured_image.alt | escape }}">
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.price | money }}</p>
+        </a>
+      </div>
+    {% else %}
+      <div class="product-card">
+        <a href="{{ product.url | within: collection }}">
+          <img src="{{ product.images.first.src | img_url: '300x' }}" alt="{{ product.images.first.alt | escape }}">
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.price | money }}</p>
+        </a>
+      </div>
+    {% endif %}
+  {% else %}
+    THere are no products in this collection
+  {% endfor %}
+  {% render 'pagination', pagination: paginate %}
+{% endpaginate %}
