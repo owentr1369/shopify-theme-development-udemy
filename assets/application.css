@@ -835,6 +835,9 @@
   .bg-gray-600 {
     background-color: var(--color-gray-600);
   }
+  .bg-gray-900 {
+    background-color: var(--color-gray-900);
+  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -852,6 +855,9 @@
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
+  }
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
@@ -1057,6 +1063,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-gray-600);
+      }
+    }
+  }
+  .hover\:bg-gray-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-700);
       }
     }
   }
