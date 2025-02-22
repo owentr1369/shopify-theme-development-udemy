@@ -687,9 +687,6 @@
   .h-94 {
     height: calc(var(--spacing) * 94);
   }
-  .h-96 {
-    height: calc(var(--spacing) * 96);
-  }
   .h-100 {
     height: calc(var(--spacing) * 100);
   }
@@ -1091,10 +1088,6 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
-  .outline-none {
-    --tw-outline-style: none;
-    outline-style: none;
-  }
   .hover\:scale-105 {
     &:hover {
       @media (hover: hover) {
@@ -1247,11 +1240,6 @@
   .md\:flex-1 {
     @media (width >= 48rem) {
       flex: 1;
-    }
-  }
-  .md\:grid-cols-1 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
     }
   }
   .md\:grid-cols-2 {
